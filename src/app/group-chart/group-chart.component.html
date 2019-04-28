@@ -1,0 +1,4 @@
+<mat-button-toggle-group (change)="onButtonClick($event)">
+    <mat-button-toggle *ngFor="let chart of charts; let i = index" [attr.data-index]="i" [checked]="i === 0" [value]="i">{{chart.options.title}}</mat-button-toggle>
+</mat-button-toggle-group>
+<google-chart [data]="displayedChart"></google-chart>
